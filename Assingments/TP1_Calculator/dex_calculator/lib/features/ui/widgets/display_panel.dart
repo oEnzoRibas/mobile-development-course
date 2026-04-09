@@ -14,12 +14,12 @@ class DisplayPanel extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.bottomRight,
-      padding: const EdgeInsets.all(24.0),
+      padding: const EdgeInsets.all(32.0),
       child: Text(
         content,
         style: TextStyle(
-          fontSize: 48,
-          fontWeight: FontWeight.w300,
+          fontSize: isError ? 17 : 48,
+          fontWeight: FontWeight.w400,
           color: isError ? Theme.of(context).colorScheme.error : Colors.white,
         ),
       ),

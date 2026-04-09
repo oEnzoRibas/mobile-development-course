@@ -13,17 +13,17 @@ class KeypadButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isOperator = ['/', '*', '-', '+', '='].contains(label);
-    final isAction = ['C', 'Del'].contains(label);
+    final isAction = ['C', '<--'].contains(label);
 
     Color bgColor = const Color(0xFF3E3E3E);
     if (isOperator) bgColor = Theme.of(context).colorScheme.primary;
-    if (isAction) bgColor = Theme.of(context).colorScheme.error.withOpacity(0.8);
+    if (isAction) bgColor = Theme.of(context).colorScheme.error.withValues(alpha: 1);
 
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
         backgroundColor: bgColor,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(16),
+          borderRadius: BorderRadius.circular(10),
         ),
       ),
       onPressed: onTap,

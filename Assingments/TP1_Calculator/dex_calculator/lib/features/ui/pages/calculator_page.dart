@@ -11,9 +11,10 @@ class CalculatorPage extends StatefulWidget {
 }
 
 class _CalculatorPageState extends State<CalculatorPage> {
-  // Injeção manual simples. Em projetos grandes, usaríamos GetIt ou Provider.
+  // Injeção manual simples.
   final CalculatorController _controller = CalculatorController();
 
+  // Destructor para liberar recursos do controller quando a página for descartada. Isso evita vazamentos de memória.
   @override
   void dispose() {
     _controller.dispose();
@@ -23,7 +24,7 @@ class _CalculatorPageState extends State<CalculatorPage> {
   void _handleButtonTap(String label) {
     if (label == 'C') {
       _controller.clear();
-    } else if (label == 'Del') {
+    } else if (label == '<--') {
       _controller.deleteLast();
     } else if (label == '=') {
       _controller.calculateResult();
@@ -63,7 +64,7 @@ class _CalculatorPageState extends State<CalculatorPage> {
                 ),
                 child: Column(
                   children: [
-                    _buildButtonRow(['C', 'Del', '/', '*']),
+                    _buildButtonRow(['C', '<--', '/', '*']),
                     _buildButtonRow(['7', '8', '9', '-']),
                     _buildButtonRow(['4', '5', '6', '+']),
                     _buildButtonRow(['1', '2', '3', '=']),
@@ -78,6 +79,7 @@ class _CalculatorPageState extends State<CalculatorPage> {
     );
   }
 
+  /// Constrói uma linha de botões a partir de uma lista de rótulos. O botão '0' ocupa o dobro do espaço.
   Widget _buildButtonRow(List<String> labels) {
     return Expanded(
       child: Row(
