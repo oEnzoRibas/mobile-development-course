@@ -1,19 +1,6 @@
+import 'package:dex_calculator/app_widget.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const Calculator());
-}
-
-class Calculator extends StatelessWidget {
-  const Calculator({super.key})
-
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-      return const MaterialApp(
-        home: Scaffold(
-          body: Center(child: Text('Calculator'))
-        ),
-      );
-  }
+  runApp(const AppWidget());
 }
