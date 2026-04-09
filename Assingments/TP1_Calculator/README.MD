@@ -1,3 +1,7 @@
+# Trabalho Prático 1
+
+## Enunciado
+
 Desenvolver, em Flutter, uma calculadora simples com as seguintes características:
 
 contendo apenas as quatro operações aritméticas básicas (soma, subtração, multiplicação e divisão);
@@ -14,3 +18,7 @@ Forma de entrega: aqui mesmo nesta atividade do AVA. Submeta um arquivo .zip com
 Obs.1: É possível que para esse primeiro projeto, haja apenas o arquivo main.dart. Ainda assim, sugere-se que você compacte toda a pasta do projeto.
 
 Obs.2: Eventuais dúvidas devem ser solucionadas em sala de aula, nesta semana.
+
+## Resultado
+
+![Calculadora](media/dex_calculator.png)
