@@ -1,0 +1,4 @@
+Olá, professor. Não consegui enviar o projeto zippado, pois o moodle tem um limite de 100Mb para envio, e o projeto ficou com cerca de 400Mb.
+Envio então a /lib contendo o código desenvolvido. 
+
+Caso queira acessar o projeto inteiro: https://github.com/oEnzoRibas/mobile-development-course
